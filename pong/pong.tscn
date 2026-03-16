@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://d30vu6qu5istp"]
+
+[ext_resource type="PackedScene" uid="uid://d3elhdretovyx" path="res://Jugador/jugador.tscn" id="1_1hw3o"]
+[ext_resource type="PackedScene" uid="uid://cjkm2a5iobnmd" path="res://oponente/oponente.tscn" id="2_g8uh0"]
+[ext_resource type="PackedScene" uid="uid://wc3itgii1oyb" path="res://pelota/pelota.tscn" id="3_fif4v"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_1hw3o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1hw3o"]
+size = Vector2(1280, 4)
+
+[node name="Pong" type="Node2D" unique_id=1276151514]
+
+[node name="jugador" parent="." unique_id=1811565031 instance=ExtResource("1_1hw3o")]
+
+[node name="oponente" parent="." unique_id=1763351695 instance=ExtResource("2_g8uh0")]
+
+[node name="pelota" parent="." unique_id=1276150391 instance=ExtResource("3_fif4v")]
+
+[node name="pared" type="StaticBody2D" parent="." unique_id=223057424]
+position = Vector2(640, 40)
+
+[node name="Sprite2D" type="Sprite2D" parent="pared" unique_id=1327463719]
+position = Vector2(0, -1.6391277e-07)
+scale = Vector2(1280, 4)
+texture = SubResource("CanvasTexture_1hw3o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pared" unique_id=1185084711]
+shape = SubResource("RectangleShape2D_1hw3o")
+
+[node name="pared2" type="StaticBody2D" parent="." unique_id=425462441]
+position = Vector2(640, 680)
+
+[node name="Sprite2D" type="Sprite2D" parent="pared2" unique_id=1402291499]
+position = Vector2(0, -1.6391277e-07)
+scale = Vector2(1280, 4)
+texture = SubResource("CanvasTexture_1hw3o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pared2" unique_id=935954503]
+shape = SubResource("RectangleShape2D_1hw3o")

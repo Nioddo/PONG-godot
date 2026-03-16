@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cjkm2a5iobnmd"]
+
+[ext_resource type="Texture2D" uid="uid://dnw41lxww3qyx" path="res://assets/paddle.png" id="1_gp263"]
+[ext_resource type="Script" uid="uid://skifye7g0ee4" path="res://oponente/oponente.gd" id="1_tpwqw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ug00j"]
+radius = 8.0
+height = 64.0
+
+[node name="oponente" type="CharacterBody2D" unique_id=1811565031]
+position = Vector2(1180, 360)
+script = ExtResource("1_tpwqw")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=340789598]
+scale = Vector2(2, 2)
+texture = ExtResource("1_gp263")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=441524530]
+shape = SubResource("CapsuleShape2D_ug00j")

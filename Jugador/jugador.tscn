@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://d3elhdretovyx"]
+
+[ext_resource type="Texture2D" uid="uid://dnw41lxww3qyx" path="res://assets/paddle.png" id="1_feffl"]
+[ext_resource type="Script" uid="uid://pbmffmvxcx8p" path="res://Jugador/jugador.gd" id="1_ug00j"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ug00j"]
+radius = 8.0
+height = 64.0
+
+[node name="jugador" type="CharacterBody2D" unique_id=1811565031]
+position = Vector2(100, 360)
+script = ExtResource("1_ug00j")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=340789598]
+scale = Vector2(2, 2)
+texture = ExtResource("1_feffl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=441524530]
+shape = SubResource("CapsuleShape2D_ug00j")
