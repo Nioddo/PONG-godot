@@ -2,6 +2,9 @@ extends CharacterBody2D
 
 var speed = 500
 func _ready():
+	set_ball_velocity()
+
+func set_ball_velocity():
 	if randi() % 2 == 0:
 		velocity.x = 1
 	else:
