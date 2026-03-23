@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dbsbawcat45hi"]
 
-[ext_resource type="Script" uid="uid://8dj0cua26yeo" path="res://menu.gd" id="1_lti8b"]
+[ext_resource type="Script" uid="uid://8dj0cua26yeo" path="res://menu/menu.gd" id="1_j0t7f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ouk20"]
 bg_color = Color(0.1584723, 0.15847233, 0.1584723, 1)
@@ -19,7 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_lti8b")
+script = ExtResource("1_j0t7f")
 
 [node name="Panel" type="Panel" parent="." unique_id=1714928559]
 layout_mode = 1
@@ -51,21 +51,34 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_vsb4k")
-text = "iniciar"
+text = "1 vs 1"
 
 [node name="Button2" type="Button" parent="VBoxContainer" unique_id=1894174785]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_vsb4k")
-text = "iniciar"
+text = "Facil"
 
 [node name="Button3" type="Button" parent="VBoxContainer" unique_id=1096994482]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_vsb4k")
-text = "iniciar"
+text = "Dificil"
+
+[node name="Label" type="Label" parent="." unique_id=253139232]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_top = 103.0
+offset_right = 55.0
+offset_bottom = 126.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 50
+text = "PONG / ODDO"
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_CPU_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_facil_pressed"]

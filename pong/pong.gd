@@ -3,6 +3,11 @@ extends Node2D
 const center = Vector2(640, 360)
 var JUGADOR_PUNT = -2
 var OPONENTE_PUNT = -2
+
+func _process(delta):
+	if Input.is_action_just_pressed("ui_cancel"):
+		get_tree().change_scene_to_file("res://menu/menu.tscn")
+
 func _on_pelota_afuera_body_entered(body):
 	OPONENTE_PUNT +=1
 	$puntaje_o.text=str(OPONENTE_PUNT)
@@ -18,3 +23,4 @@ func reset():
 	$pelota.call("set_ball_velocity")
 	$jugador.position.y = center.y
 	$oponente.position.y = center.y
+	
